@@ -3,7 +3,7 @@
 import numpy as np 
 
 def data_prep(data):
-    data_path = '../data/'
+    data_path = './data/'
     if data == "MNIST":
         X = np.load(data_path + '/mnist_images.npy', allow_pickle=True).reshape(70000, 28 * 28)
         labels = np.load(data_path + '/mnist_labels.npy', allow_pickle=True)
