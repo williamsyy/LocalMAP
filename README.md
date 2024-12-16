@@ -1,29 +1,21 @@
-# PaCMAP
-
-## <a name='News'></a>News
-
-### NeurIPS 2024: New Parametric DR method ParamRepulsor accepted
-
-We're excited to announce that our latest work has been published at the Thirty-Eighth Conference on Neural Information Processing Systems (**NeurIPS 2024**)!🎉🎉
-
-Traditional dimensionality reduction (DR) algorithms struggle with online-learning scenarios, while existing parametric DR approaches often fail to preserve local structure in visualizations.
-Our latest algorithm, *ParamRepulsor*, builds on Parametric PaCMAP to address these challenges, achieving state-of-the-art performance in both local and global structure preservation. With GPU support using PyTorch, ParamRepulsor delivers exceptional speed and scalability, making it suitable for large-scale and dynamic datasets.
-
-Check out the [NeurIPS paper](https://openreview.net/pdf?id=eYNYnYle41) and the [code](https://github.com/hyhuang00/ParamRepulsor) for detailed insights into the new approach.
+# LocalMAP
 
 ## <a name='Introduction'></a>Introduction
 
-**Our work has been published at the Journal of Machine Learning Research(JMLR)!**
+**Our work has been published at the The 39th Annual AAAI Conference on Artificial Intelligence!**
 
-PaCMAP (Pairwise Controlled Manifold Approximation) is a dimensionality reduction method that can be used for visualization, preserving both local and global structure of the data in original space. PaCMAP optimizes the low dimensional embedding using three kinds of pairs of points: neighbor pairs (pair_neighbors), mid-near pair (pair_MN), and further pairs (pair_FP).
+LocalMAP (Pairwise Controlled Manifold Approximation with Local Adjusted Graph) is a new dimensionality reduction algorithm that dynamically and locally adjusts the graph to address the challenges of getting suboptimal graph due to unreliable high-dimensional distances and the limited information extracted from the high-dimensional data.
 
-Previous dimensionality reduction techniques focus on either local structure (e.g. t-SNE, LargeVis and UMAP) or global structure (e.g. TriMAP), but not both, although with carefully tuning the parameter in their algorithms that controls the balance between global and local structure, which mainly adjusts the number of considered neighbors. Instead of considering more neighbors to attract for preserving glocal structure, PaCMAP dynamically uses a special group of pairs -- mid-near pairs, to first capture global structure and then refine local structure, which both preserve global and local structure. For a thorough background and discussion on this work, please read [our paper](https://jmlr.org/papers/v22/20-1061.html).
+Previous research within the Dimension Reduction (DR) methods often involves converting the original high-dimensional data into a graph. Each edge in the graph represents the similarity or dissimilarity between pairs of data points. However, this graph is frequently suboptimal due to unreliable high-dimensional distances and the limited information extracted from the high-dimensional data. This problem is exacerbated as the dataset size increases. We have observed that some DR methods inadvertently merge multiple clusters that could be distinguished if the algorithm were applied only to specific sections of the embedding. Therefore, we introduce LocalMAP, a new dimensionality reduction algorithm that dynamically and locally adjusts the graph to address these challenges. LocalMAP is capable of identifying and separating real clusters within the data that other DR methods may overlook or combine.
 
 ## <a name='ReleaseNotes'></a>Release Notes
 
 Please see the [release notes](release_notes.md).
 
 ## <a name='Installation'></a>Installation
+
+LocalMAP method is currently embedded in [PaCMAP](https://github.com/YingfanWang/PaCMAP) package. To try LocalMAP, please install the PaCMAP package.
+
 
 ### <a name='Installfromconda-forgeviacondaormamba'></a>Install from conda-forge via conda or mamba
 
@@ -68,7 +60,7 @@ pip install pacmap
 The `pacmap` package is designed to be compatible with `scikit-learn`, meaning that it has a similar interface with functions in the `sklearn.manifold` module. To run `pacmap` on your own dataset, you should install the package following the instructions in [installation](#installation), and then import the module. The following code clip includes a use case about how to use PaCMAP on the [COIL-20](https://www.cs.columbia.edu/CAVE/software/softlib/coil-20.php) dataset:
 
 ```python
-import pacmap
+from pacmap import LocalMAP
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -97,12 +89,6 @@ You can also use PaCMAP in R with the [reticulate package](https://rstudio.githu
 We provide a sample [R notebook](./demo/pacmap_Rnotebook_example.Rmd) that demonstrates
 how PaCMAP can be called in R for visualization. We also provide a [Seurat Intergation](https://github.com/williamsyy/gdc-frontend-framework) that allows seamless integration with
 [Seurat](https://github.com/satijalab/seurat) Objects for single cell genomics.
-
-### <a name='UsingPaCMAPinRust'></a>Using PaCMAP in Rust
-
-A [Rust implementation](https://github.com/beamform/pacmap-rs.git) of PaCMAP has
-recently be released by @hadronzoo. This implementation is Python free, meaning that
-it does not depend on a Python runtime or Python environment.
 
 ## <a name='Benchmarks'></a>Benchmarks
 
