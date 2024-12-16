@@ -37,7 +37,7 @@ pair_neighbors = pacmap.sample_neighbors_pair(X, scaled_dist, nbrs, np.int32(n_n
 
 # initializing the pacmap instance
 # feed the pair_neighbors into the instance
-embedding = pacmap.PaCMAP(n_components=2,
+embedding = pacmap.LocalMAP(n_components=2,
                           n_neighbors=n_neighbors,
                           MN_ratio=0.5,
                           FP_ratio=2.0,

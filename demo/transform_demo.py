@@ -27,7 +27,7 @@ for n in n_splits:
         break
 
     # Initialize the instance
-    reducer = pacmap.PaCMAP(n_components=2, n_neighbors=10, MN_ratio=0.5, FP_ratio=2.0, random_state=20, save_tree=False)
+    reducer = pacmap.LocalMAP(n_components=2, n_neighbors=10, MN_ratio=0.5, FP_ratio=2.0, random_state=20, save_tree=False)
 
     # Fit the training set
     embedding = reducer.fit_transform(X_train)
