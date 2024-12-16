@@ -1,0 +1,7 @@
+phate
+opentsne
+umap-learn
+hnne
+contrastive-ne
+trimap
+tqdm
