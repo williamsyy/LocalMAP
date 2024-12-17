@@ -4,7 +4,7 @@
 
 **Our work has been published at the The 39th Annual AAAI Conference on Artificial Intelligence!**
 
-LocalMAP (Pairwise Controlled Manifold Approximation with Local Adjusted Graph) is a new dimensionality reduction algorithm that dynamically and locally adjusts the graph to address the challenges of getting suboptimal graph due to unreliable high-dimensional distances and the limited information extracted from the high-dimensional data.
+LocalMAP (Pairwise Controlled Manifold Approximation with Local Adjusted Graph) is a new dimensionality reduction algorithm that dynamically and locally adjusts the graph to address the challenges of getting a suboptimal graph due to unreliable high-dimensional distances and the limited information extracted from the high-dimensional data.
 
 Previous research within the Dimension Reduction (DR) methods often involves converting the original high-dimensional data into a graph. Each edge in the graph represents the similarity or dissimilarity between pairs of data points. However, this graph is frequently suboptimal due to unreliable high-dimensional distances and the limited information extracted from the high-dimensional data. Therefore, we introduce LocalMAP, a new dimensionality reduction algorithm that dynamically and locally adjusts the graph to address these challenges. LocalMAP is capable of identifying and separating real clusters within the data that other DR methods may overlook or combine.
 
@@ -124,13 +124,13 @@ Similar to the scikit-learn API, the LocalMAP instance can generate embedding fo
 
 ## <a name='Howtouseuser-specifiednearestneighbor'></a>How to use user-specified nearest neighbor
 
-We have provided an option to allow users to use their own nearest neighbors when mapping large-scale datasets. Please see the [demo](./demo/specify_nn_demo.py) for a detailed walkthrough about how to use PaCMAP with the user-specified nearest neighbors.
+We have provided an option to allow users to use their own nearest neighbors when mapping large-scale datasets. Please see the [demo](./demo/specify_nn_demo.py) for a detailed walkthrough about how to use LocalMAP with the user-specified nearest neighbors.
 
 ## <a name='Reproducingourexperiments'></a>Reproducing our experiments
 
 We have provided the code we use to run experiment for better reproducibility. The code are separated into three parts, in three folders, respectively:
 
-- `data`, which includes part of the datasets we used, preprocessed into the file format each DR method use. Since some of the datasets are too large to put in Github. If you need specific dataset, please send an email to [yiyang.sun@duke.edu](mailto:yiyang.sun@duke.edu).
+- `data`, which includes part of the datasets we used, preprocessed into the file format each DR method use. Since some of the datasets are too large to put in Github. If you need a specific dataset, please send an email to [yiyang.sun@duke.edu](mailto:yiyang.sun@duke.edu).
 - `experiments`, which includes all the scripts we use to produce DR results.
 - `evaluation`, which includes all the scripts we use to evaluate DR results.
 
