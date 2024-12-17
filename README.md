@@ -89,11 +89,13 @@ The following images are visualizations of two datasets: [MNIST](http://yann.lec
 
 ![MNIST](/images/MNIST_embedding.png?raw=true "LocalMAP's result on MNIST")
 
-Figure 1. Different DR Performance on MNIST
+
+<p align="center">Figure 1. DR Performance Comparison on MNIST</p>
 
 ![Mammoth](/images/USPS_embedding.png?raw=true "LocalMAP's result on USPS")
 
-Figure 2. Different DR Performance on USPS
+<p align="center">Figure 2. DR Performance Comparison on USPS</p>
+
 
 ## <a name='Parameters'></a>Parameters
 
