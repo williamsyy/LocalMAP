@@ -14,7 +14,7 @@ Please see the [release notes](release_notes.md). This release note is correlate
 
 ## <a name='Installation'></a>Installation
 
-LocalMAP method is currently embedded in [PaCMAP](https://github.com/YingfanWang/PaCMAP) package. To try LocalMAP, please install the PaCMAP package.
+LocalMAP method is currently embedded in [PaCMAP](https://github.com/YingfanWang/PaCMAP) package. To try LocalMAP, please install the PaCMAP package. If you have met with any problem that is related to LocalMAP, please submit a pull requests/issues to [localmap](https://github.com/williamsyy/LocalMAP/tree/localmap) branch, we will check and fix them in the package as soon as possible.
 
 
 ### <a name='Installfromconda-forgeviacondaormamba'></a>Install from conda-forge via conda or mamba
