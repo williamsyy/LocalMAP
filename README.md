@@ -4,7 +4,7 @@
 
 **Our work has been published at the The 39th Annual AAAI Conference on Artificial Intelligence!**
 
-[LocalMAP (Pairwise Controlled Manifold Approximation with Local Adjusted Graph)](https://arxiv.org/abs/2412.15426) is a new dimensionality reduction algorithm that dynamically and locally adjusts the graph to address the challenges of getting a suboptimal graph due to unreliable high-dimensional distances and the limited information extracted from the high-dimensional data.
+[LocalMAP (Pairwise Controlled Manifold Approximation with Local Adjusted Graph)](https://www.arxiv.org/abs/2412.15426) is a new dimensionality reduction algorithm that dynamically and locally adjusts the graph to address the challenges of getting a suboptimal graph due to unreliable high-dimensional distances and the limited information extracted from the high-dimensional data.
 
 Previous research within the Dimension Reduction (DR) methods often involves converting the original high-dimensional data into a graph. Each edge in the graph represents the similarity or dissimilarity between pairs of data points. However, this graph is frequently suboptimal due to unreliable high-dimensional distances and the limited information extracted from the high-dimensional data. Therefore, we introduce LocalMAP, a new dimensionality reduction algorithm that dynamically and locally adjusts the graph to address these challenges. LocalMAP is capable of identifying and separating real clusters within the data that other DR methods may overlook or combine.
 
@@ -14,7 +14,7 @@ Please see the [release notes](release_notes.md). This release note is correlate
 
 ## <a name='Installation'></a>Installation
 
-LocalMAP method is currently embedded in [PaCMAP](https://github.com/YingfanWang/PaCMAP) package. To try LocalMAP, please install the PaCMAP package. If you have met with any problem that is related to LocalMAP, please submit a pull requests/issues to [localmap](https://github.com/williamsyy/LocalMAP/tree/localmap) branch, we will check and fix them in the package as soon as possible.
+LocalMAP method is currently embedded in [PaCMAP](https://github.com/YingfanWang/PaCMAP) package. To try LocalMAP, please install the PaCMAP package.
 
 
 ### <a name='Installfromconda-forgeviacondaormamba'></a>Install from conda-forge via conda or mamba
@@ -89,13 +89,7 @@ The following images are visualizations of two datasets: [MNIST](http://yann.lec
 
 ![MNIST](/images/MNIST_embedding.png?raw=true "LocalMAP's result on MNIST")
 
-
-<p align="center">Figure 1. DR Performance Comparison on MNIST</p>
-
 ![Mammoth](/images/USPS_embedding.png?raw=true "LocalMAP's result on USPS")
-
-<p align="center">Figure 2. DR Performance Comparison on USPS</p>
-
 
 ## <a name='Parameters'></a>Parameters
 
@@ -144,16 +138,7 @@ After downloading the code, you may need to specify some of the paths in the scr
 
 ## <a name='Citation'></a>Citation
 
-If you have referred to our research in your publication, or you used the LocalMAP algorithm in this repository, please cite our paper using the following bibtex:
-
-```
-@inproceedings{localmap,
-  title={Dimension Reduction with Locally Adjusted Graphs},
-  author={Wang, Yingfan and Sun, Yiyang and Huang, Haiyang and Rudin, Cynthia},
-  booktitle={Thirty-Ninth AAAI Conference on Artificial Intelligence},
-  year={2025},
-}
-```
+LocalMAP will be released to Arxiv Soon!
 
 ## <a name='License'></a>License
 
