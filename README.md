@@ -95,9 +95,9 @@ The following images are visualizations of two datasets: [MNIST](http://yann.lec
 
 The list of the most important parameters is given below.
 
-- `n_components`: the number of dimension of the output. Default to 2.
+- `n_components`: the number of dimensions of the output. Default to 2.
 
-- `n_neighbors`: the number of neighbors considered in the k-Nearest Neighbor graph. Default to 10. We also allow this parameter to be set to `None` to enable the auto-selection of number of neighbors: the number of neighbors will be set to 10 for dataset whose sample size is smaller than 10000. For large dataset whose sample size (n) is larger than 10000, the value is: 10 + 15 * (log10(n) - 4).
+- `n_neighbors`: the number of neighbors considered in the k-Nearest Neighbor graph. Default to 10. We also allow this parameter to be set to `None` to enable the auto-selection of numbers of neighbors: the number of neighbors will be set to 10 for datasets whose sample size is smaller than 10000. For large dataset whose sample size (n) is larger than 10000, the value is: 10 + 15 * (log10(n) - 4).
 
 - `MN_ratio`: the ratio of the number of mid-near pairs to the number of neighbors, `n_MN` = <img src="https://latex.codecogs.com/gif.latex?\lfloor" title="\lfloor" /> `n_neighbors * MN_ratio` <img src="https://latex.codecogs.com/gif.latex?\rfloor" title="\rfloor" /> . Default to 0.5.
 
@@ -111,12 +111,12 @@ The initialization is also important to the result, but it's a parameter of the 
 
 Other parameters include:
 
-- `num_iters`: number of iterations. Default to 450. 450 iterations is enough for most dataset to converge.
+- `num_iters`: number of iterations. Default to 450. 450 iterations are enough for most datasets to converge.
 - `pair_neighbors`, `pair_MN` and `pair_FP`: pre-specified neighbor pairs, mid-near points, and further pairs. Allows user to use their own graphs. Default to `None`.
 - `verbose`: print the progress of pacmap. Default to `False`
 - `lr`: learning rate of the AdaGrad optimizer. Default to 1.
-- `apply_pca`: whether pacmap should apply PCA to the data before constructing the k-Nearest Neighbor graph. Using PCA to preprocess the data can largely accelerate the DR process without losing too much accuracy. Notice that this option does not affect the initialization of the optimization process.
-- `intermediate`: whether pacmap should also output the intermediate stages of the optimization process of the lower dimension embedding. If `True`, then the output will be a numpy array of the size (n, `n_components`, 13), where each slice is a "screenshot" of the output embedding at a particular number of steps, from [0, 10, 30, 60, 100, 120, 140, 170, 200, 250, 300, 350, 450].
+- `apply_pca`: whether localmap should apply PCA to the data before constructing the k-Nearest Neighbor graph. Using PCA to preprocess the data can largely accelerate the DR process without losing too much accuracy. Notice that this option does not affect the initialization of the optimization process.
+- `intermediate`: whether localmap should also output the intermediate stages of the optimization process of the lower dimension embedding. If `True`, then the output will be a numpy array of the size (n, `n_components`, 13), where each slice is a "screenshot" of the output embedding at a particular number of steps, from [0, 10, 30, 60, 100, 120, 140, 170, 200, 250, 300, 350, 450].
 
 ## <a name='Methods'></a>Methods
 
